@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+      padding: 10px;
+
+}
+
+.title h1 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.titleItems,
+.items {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.titleItem {
+  flex: 1;
+}
+
+.center {
+  text-align: center;
+}
+
+.titleItems {
+    border-bottom: 1px SOLID #000000;
+    border-right: 1px SOLID #356854;
+    background-color: #356854;
+    color: #ffffff;
+    font-family: docs-Roboto, Arial;
+    font-size: 12px;
+      padding: 10px 5px;
+}
+
+.items {
+
+}
+
+.item {
+  border-bottom: 1px SOLID #000000;
+    border-right: 1px SOLID #000000;
+    border-right: 1px SOLID #000000;
+border-left: 1px SOLID #000000;
+    color: #434343;
+    font-family: docs-Roboto, Arial;
+    font-size: 12px;
+      padding: 10px 5px;
+
+}
+
+.vendido {
+    background-color: #34a853;
+    color: #ffffff;
+    font-family: docs-Roboto, Arial;
+    font-size: 12px;
+}
+
+.items:nth-child(odd) {
+  background-color: #f6f8f9;
+}
